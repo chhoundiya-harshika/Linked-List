@@ -78,6 +78,18 @@ class LinkedList:
         print("middle", temp.data)
         prev.next = temp.next
         temp=None
+        
+    def delfirst_last(self):
+        temp1= self.head
+        temp1=None
+        prev=None
+        temp=self.head=self.head.next
+        while temp.next:
+            prev=temp
+            temp=temp.next
+        prev.next =None
+        temp = None
+
     #delete the node 
     def del_node(self, value):
         temp = self.head
@@ -130,6 +142,7 @@ print("Display the list")
 list.display()
 print("Display middle node")
 list.findmid_del()
+list.delfirst_last()
 list.del_node(40)
 print("Display updated list")
 list.display()
