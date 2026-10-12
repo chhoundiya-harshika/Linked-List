@@ -89,6 +89,16 @@ class LinkedList:
             temp=temp.next
         prev.next =None
         temp = None
+        
+    def del_alt(self):
+        temp= self.head.next
+        prev=self.head
+        while prev and temp:
+            prev.next=temp.next
+            temp=None
+            prev=prev.next
+            if prev:
+                temp=prev.next
 
     #delete the node 
     def del_node(self, value):
@@ -136,18 +146,22 @@ list.append(n1)
 list.append(n2)
 list.append(n3)
 list.append(Node(40))
-list.display()
-list.insertAtPos(Node(100), 1)
-print("Display the list")  
-list.display()
-print("Display middle node")
-list.findmid_del()
-list.delfirst_last()
-list.del_node(40)
-print("Display updated list")
+# list.display()
+# list.insertAtPos(Node(100), 1)
+# print("Display the list")  
+# list.display()
+# print("Display middle node")
+# list.findmid_del()
+# print()
+# list.delfirst_last()
+# print()
+list.del_alt()
+print("delete the alternate code:")
+# list.del_node(40)
+# print("Display updated list")
 list.display()
 list.reverse()
 print("Display reverse list")
 list.display()
-print("Sum of two consecutive nodes")
-list.sum_of_two_nodes()
+# print("Sum of two consecutive nodes")
+# list.sum_of_two_nodes()
