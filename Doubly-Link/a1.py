@@ -11,7 +11,7 @@ class LinkedList:
         if temp:
             while temp.next: #finding last node
                 temp=temp.next
-            temp.next=new_node #doubly requirement node add to the last
+            temp.next=new_node #doubly requirement add to
             new_node.prev=temp #doubly requirement
         else:
             self.head=new_node

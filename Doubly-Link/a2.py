@@ -27,9 +27,9 @@ class LinkedList:
             while(p!=pos-1):
                 temp=temp.next
                 p+=1
-            temp.next=new_node
             new_node.prev=temp
             new_node.next = temp.next
+            temp.next=new_node
             if temp.next: #this is for last pos
                 temp.next.prev=new_node
                 
@@ -49,4 +49,6 @@ list1.append(Node(16))
 list1.append(Node(18))      
 list1.print()
 list1.insert(Node(5),1) 
+list1.insert(Node(15),3) 
+list1.insert(Node(45),8) 
 list1.print()
