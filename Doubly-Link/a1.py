@@ -9,10 +9,10 @@ class LinkedList:
     def append(self, new_node):
         temp = self.head
         if temp:
-            while temp.next:
+            while temp.next: #finding last node
                 temp=temp.next
-            temp.next=new_node
-            new_node.prev=temp
+            temp.next=new_node #doubly requirement node add to the last
+            new_node.prev=temp #doubly requirement
         else:
             self.head=new_node
     def print(self):
