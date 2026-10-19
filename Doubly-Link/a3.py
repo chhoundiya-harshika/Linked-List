@@ -41,23 +41,32 @@ class LinkedList:
     #                 temp=temp.next
         #for reverse the list element
         
-    def delete(self, value):
+    # def delete(self, value):
+    #     temp=self.head
+    #     prev = None
+    #     if temp.data==value: #first node
+    #         self.head=self.head.next
+    #         self.head.prev= None
+    #     else:
+    #         while(temp.data!= value and temp):
+    #             temp=temp.next
+    #             if temp==None:
+    #                 print("Value is not present in the list:")
+    #                 return
+    #             temp.prev.next=temp.prev
+    #             if temp.next: #not the last node
+    #                 temp.next.prev=temp.prev #last node delete
+    #             temp=None
+                
+    def occurance(self, num):
         temp=self.head
-        prev = None
-        if temp.data==value: #first node
-            self.head=self.head.next
-            self.head.prev= None
-        else:
-            while(temp.data!= value and temp):
-                temp=temp.next
-                if temp==None:
-                    print("Value is not present in the list:")
-                    return
-                temp.prev.next=temp.prev
-                if temp.next: #not the last node
-                    temp.next.prev=temp.prev #last node delete
-                temp=None
-                    
+        count=0
+        while temp :
+            if temp.data==num:
+                count+=1
+            temp=temp.next
+        print("The occurances", count)
+                  
             
     def print(self):
         temp=self.head
@@ -76,9 +85,9 @@ list1.append(Node(14))
 list1.append(Node(16))       
 list1.append(Node(18))      
 list1.print()
-# list1.insert(Node(5),1) 
-# list1.insert(Node(15),3) 
-# list1.insert(Node(45),8) 
-# list1.print()
-list1.delete(12)
+list1.insert(Node(5),1) 
+list1.insert(Node(15),3) 
+list1.insert(Node(45),8) 
 list1.print()
+# list1.delete(12)
+list1.occurance(12)
