@@ -33,14 +33,23 @@ class LinkedList:
             if temp.next: #this is for last pos
                 temp.next.prev=new_node
                 
-        
-        
+    # def print(self):
+    #             temp=self.head
+    #             print("List elements: ")
+    #             while temp:
+    #                 print(temp.data," ")
+    #                 temp=temp.next
+        #for reverse the list element
     def print(self):
         temp=self.head
         print("List elements: ")
         while temp:
-            print(temp.data," ")
+           # print(temp.data," ")
             temp=temp.next
+        while (temp):
+            print(temp.data, end=" ")
+            temp=temp.prev
+            
 list1=LinkedList()
 list1.append(Node(10))       
 list1.append(Node(12))       
