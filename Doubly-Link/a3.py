@@ -66,7 +66,17 @@ class LinkedList:
                 count+=1
             temp=temp.next
         print("The occurances", count)
-                  
+        
+    def swap (self):
+        temp = node1=self.head #node1 is first node
+        while (temp.next): #temp is last node
+            temp=temp.next
+        temp.next=node1.next
+        node1.next=None
+        node1.prev=temp.prev
+        temp.prev.next=node1
+        temp.prev=None
+        self.head=temp          
             
     def print(self):
         temp=self.head
@@ -90,4 +100,6 @@ list1.insert(Node(15),3)
 list1.insert(Node(45),8) 
 list1.print()
 # list1.delete(12)
-list1.occurance(12)
+#list1.occurance(12)
+list1.swap()
+list1.print()
