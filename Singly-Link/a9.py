@@ -40,7 +40,7 @@ class LinkedList:
                     new_node.next = temp.next
                     temp.next = new_node
                     
-    #accessing the middle element or node
+    #accessing the middle element or node+
     def mid_node(self):
         temp = self.head
         count = 0

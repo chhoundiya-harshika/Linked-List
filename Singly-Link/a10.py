@@ -28,6 +28,7 @@ class LinkedList:
             self.head=new_node
         else:
             temp = self.head
+            
             while(temp.next != None):
                 temp = temp.next
             temp.next = new_node  #appending new node

@@ -28,9 +28,9 @@ class SinglyLinkList:
                
     def insertATEnd(self, value):
         temp = Node(value)
-        if self.head is not None:
+        if self.head != None:
             t1 = self.head
-            while t1.next is not None:
+            while t1.next != None:
                 t1 = t1.next
             t1.next = temp
         else:
@@ -38,7 +38,7 @@ class SinglyLinkList:
 
     def printLL(self):
         t1 = self.head
-        while t1 is not None:
+        while t1 != None:
             print(t1.data)
             t1 = t1.next
 
